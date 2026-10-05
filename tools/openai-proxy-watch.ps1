@@ -36,6 +36,20 @@ function Test-Proxy([string]$Address, [string]$SourceAddress) {
             $stream = [System.Net.Security.SslStream]::new($client.GetStream(), $false)
             $auth = $stream.AuthenticateAsClientAsync($hostName)
             if (-not $auth.Wait(5000) -or -not $stream.IsAuthenticated) { return $false }
+
+            if ($hostName -eq 'chatgpt.com') {
+                $request = "GET /cdn-cgi/trace HTTP/1.1`r`nHost: chatgpt.com`r`nUser-Agent: Mozilla/5.0`r`nConnection: close`r`n`r`n"
+                $requestBytes = [System.Text.Encoding]::ASCII.GetBytes($request)
+                $stream.Write($requestBytes, 0, $requestBytes.Length)
+                $stream.Flush()
+
+                $reader = [System.IO.StreamReader]::new($stream, [System.Text.Encoding]::UTF8)
+                $response = $reader.ReadToEnd()
+                $location = [regex]::Match($response, '(?m)^loc=([A-Z]{2})\r?$').Groups[1].Value
+                if ($response -notmatch '^HTTP/1\.1 200' -or -not $location -or $location -in @('RU', 'BY')) {
+                    return $false
+                }
+            }
             $stream.Dispose()
         }
         catch {
@@ -100,6 +114,9 @@ try {
     if ($LASTEXITCODE -ne 0) { throw 'git push failed' }
 
     Write-Log "UPDATED: $currentAddress -> $replacement"
+    Start-Sleep -Seconds 180
+    Clear-DnsClientCache
+    Write-Log 'DNS cache cleared after NextDNS update'
 }
 catch {
     Write-Log "ERROR: $($_.Exception.Message)"
