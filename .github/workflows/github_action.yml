@@ -9,6 +9,11 @@ on:
       - main
     paths:
       - openai-hosts
+      - .github/workflows/github_action.yml
+
+concurrency:
+  group: dns-configurer
+  cancel-in-progress: false
 
 jobs:
   build:
