@@ -1,31 +1,31 @@
-# OpenAI/ChatGPT overrides verified via physical Ethernet on 2026-10-12
-5.175.161.3 ab.chatgpt.com
-5.175.161.3 android.chat.openai.com
-5.175.161.3 api.openai.com
-5.175.161.3 auth.openai.com
-5.175.161.3 auth0.openai.com
-5.175.161.3 cdn.oaistatic.com
-5.175.161.3 cdn.platform.openai.com
-5.175.161.3 chatgpt.com
-5.175.161.3 developers.openai.com
-5.175.161.3 files.oaiusercontent.com
-5.175.161.3 ios.chat.openai.com
-5.175.161.3 oaistatic.com
-5.175.161.3 oaiusercontent.com
-5.175.161.3 openai.com
-5.175.161.3 operator.chatgpt.com
-5.175.161.3 platform.openai.com
-5.175.161.3 sdmntpritalynorth.oaiusercontent.com
-5.175.161.3 sdmntprnortheu.oaiusercontent.com
-5.175.161.3 sdmntprpolandcentral.oaiusercontent.com
-5.175.161.3 sdmntprukwest.oaiusercontent.com
-5.175.161.3 tcr9i.chat.openai.com
-5.175.161.3 videos.openai.com
-5.175.161.3 webrtc.chatgpt.com
-5.175.161.3 www.chatgpt.com
-5.175.161.3 www.oaistatic.com
-5.175.161.3 www.oaiusercontent.com
-5.175.161.3 www.openai.com
+# OpenAI/ChatGPT overrides verified via physical Ethernet on 2026-10-13
+193.233.112.67 ab.chatgpt.com
+193.233.112.67 android.chat.openai.com
+193.233.112.67 api.openai.com
+193.233.112.67 auth.openai.com
+193.233.112.67 auth0.openai.com
+193.233.112.67 cdn.oaistatic.com
+193.233.112.67 cdn.platform.openai.com
+193.233.112.67 chatgpt.com
+193.233.112.67 developers.openai.com
+193.233.112.67 files.oaiusercontent.com
+193.233.112.67 ios.chat.openai.com
+193.233.112.67 oaistatic.com
+193.233.112.67 oaiusercontent.com
+193.233.112.67 openai.com
+193.233.112.67 operator.chatgpt.com
+193.233.112.67 platform.openai.com
+193.233.112.67 sdmntpritalynorth.oaiusercontent.com
+193.233.112.67 sdmntprnortheu.oaiusercontent.com
+193.233.112.67 sdmntprpolandcentral.oaiusercontent.com
+193.233.112.67 sdmntprukwest.oaiusercontent.com
+193.233.112.67 tcr9i.chat.openai.com
+193.233.112.67 videos.openai.com
+193.233.112.67 webrtc.chatgpt.com
+193.233.112.67 www.chatgpt.com
+193.233.112.67 www.oaistatic.com
+193.233.112.67 www.oaiusercontent.com
+193.233.112.67 www.openai.com
 
 
 
